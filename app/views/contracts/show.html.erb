@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Договор</title>
+    <style>
+    .modal{
+        padding: 50px;
+        background: #ccc;
+        position: fixed; top: 50%; left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    </style>
+</head>
+<body>
+<div class="modal">
+    <div>
+        <label for="id">Код договора:</label>
+        <%= @contract.id %>
+    </div>
+    <div>
+        <label for="usurname">Фамилия:</label>
+        <%= @contract.usurname %>
+    </div>
+    <div>
+        <label for="username">Имя:</label>
+        <%= @contract.username %>
+    </div>
+    <div>
+        <label for="face">Лицо:</label>
+        <%= @contract.face %>
+    </div>
+    <div>
+        <label for="status">Статус:</label>
+        <%= @contract.status %>
+    </div>
+    <div>
+        <label for="created_at">Дата создания:</label>
+        <%= @contract.created_at %>
+    </div>
+    <div>
+        <label for="tarif_id">Код тарифа:</label>
+        <%= @contract.tarif_id %>
+    </div>
+</div>
+</body>
+</html>
