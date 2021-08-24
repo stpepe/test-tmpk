@@ -25,26 +25,20 @@
         }
         </style>
 </head>
-<body>
+<body>   
     <table class="modal">
         <td>
-            <%= form_with model: @contract, url: '/contracts/create' do |f| %>
-                <%= f.label :"Имя" %><br><br>
-                <%= f.text_field :username, required: true %><br><br>
-                <%= f.label :"Фамилия" %><br><br>
-                <%= f.text_field :usurname, required: true %><br><br>
-                <%= f.label :"Лицо" %><br><br>
-                <%= f.text_field :face, required: true %><br><br>
-                <%= f.label :"Тариф" %><br><br>
-                <%= f.text_field :tarif_id, required: true %><br><br>
-                <%= f.submit "Далее" %><br><br>
-                <%= link_to "Назад", "/"%>
+            <%= form_with model: @adress, url: 'create' do |f|%>
+                <%= f.label :"Город" %><br><br>
+                <%= f.text_field :city, required: true %><br><br>
+                <%= f.label :"Улица" %><br><br>
+                <%= f.text_field :street, required: true %><br><br>
+                <%= f.label :"Дом" %><br><br>
+                <%= f.text_field :house, required: true %><br><br>
+                <%= f.label :"Кваритира" %><br><br>
+                <%= f.text_field :home, required: true %><br><br>
+                <%= f.submit "Создать" %>
             <% end %>
         </td>
     </table>
-    
-
-
-    
 </body>
-</html>

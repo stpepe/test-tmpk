@@ -4,12 +4,21 @@ class ContractsController < ApplicationController
     def index
     end
 
+    def edit
+    end
+
+    def update
+
+    end
+
     def create
         @contract = Contract.new(params.require(:contract).permit(:username, :usurname, :face, :status, :tarif_id))
+        @contract.status = "Активен"
         if @contract.save 
-            redirect_to('/')
+            aid = Contract.last[:id].to_s 
+            redirect_to("/adresses/#{aid}/new")
         else 
-            redirect_to('/contracts/new')
+            render :new
         end
     end
 
@@ -21,10 +30,6 @@ class ContractsController < ApplicationController
     end
 
     private
-
-    def contract_params
-        params.require(:contract).permit(:username, :usurname, :face, :tarif_id) 
-    end
 
     def set_contract
         @contract = Contract.find(params[:id])

@@ -31,8 +31,9 @@
         <%= form_with model: @contract, method: :post do |f| %>
             <%= f.label :"Код договора" %><br><br>
             <%= f.text_field :id, required: true %><br><br>
-            <%= f.submit "Поиск" %>
-            <%= link_to "Новый договор", "/contracts/new" %>
+            <%= f.submit "Поиск" %><br><br>
+            <%= link_to "Новый договор", "/contracts/new" %><br>
+            <%= link_to "Список тарифов", "/tarifs/show" %>
         <% end %>
     </div>
 </body>

@@ -1,0 +1,31 @@
+<h1 align="center">Тарифы</h1>
+<table border="1" align="center">
+    <tr>
+        <td>
+            <label>Код тарифа</label><br>
+        </td>
+        <td>
+            <label>Название тарифа</label><br>
+        </td>
+        <td>
+            <label>Стоимость в месяц (Руб.)</label><br>
+        </td>
+    </tr>
+    <% @tarifs.each do |tarif|%>
+        <tr>
+            <td align="middle">
+                <%= tarif.id %>
+            </td>
+            <td align="middle">
+                <%= tarif.tarifname %>
+            </td>
+            <td align="middle">
+                <%= tarif.cost %>
+            </td>
+        </tr>
+    <%end%>
+</table>
+<div align="center">
+<%= link_to "Назад", "/"%>
+</div>
+
