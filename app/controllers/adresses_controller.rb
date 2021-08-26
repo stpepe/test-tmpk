@@ -1,4 +1,5 @@
 class AdressesController < ApplicationController
+    before_action :require_authentication
     def new
         @adress = Adress.new
     end

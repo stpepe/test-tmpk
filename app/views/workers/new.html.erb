@@ -1,0 +1,25 @@
+ <style>
+    .modal{
+        padding: 50px;
+        background: #ccc;
+        position: fixed; top: 50%; left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    </style>
+    <div class="modal">
+        <%= form_with model: @worker, url: '/workers/new', method: :post do |f| %>
+            <h1>Регистрация</h1>
+                <%= f.label :"Почта" %><br><br>
+                <%= f.text_field :email, required: true %><br><br>
+                <%= f.label :"Имя" %><br><br>
+                <%= f.text_field :name, required: true %><br><br>
+                <%= f.label :"Пароль" %><br><br>
+                <%= f.password_field :password, required: true %><br><br>
+                <%= f.label :"Подтвердите пароль" %><br><br>
+                <%= f.password_field :password_confirmation, required: true %><br><br>
+                <%= f.submit "Регистрация" %><br><br>
+                <%= link_to "Уже есть аккаунт", new_session_path %>
+        <% end %>
+    </div>

@@ -1,4 +1,5 @@
 class ContractsController < ApplicationController
+    before_action :require_authentication
     before_action :set_contract, only: %i[show]
     
     def index

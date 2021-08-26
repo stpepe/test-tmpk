@@ -1,0 +1,13 @@
+
+<div class="modal">
+
+    <%= form_with url: session_path do |f| %>
+        <h1>Вход</h1>
+        <%= f.label :"Введите почту" %><br><br>
+        <%= f.text_field :email, required: true %><br><br>
+        <%= f.label :"Введите пароль" %><br><br>
+        <%= f.password_field :password, required: true %><br><br>
+        <%= f.submit "Войти" %><br><br>
+        <%# <%= link_to "Уже есть аккаунт", new_session_path %> 
+    <% end %>
+</div>
