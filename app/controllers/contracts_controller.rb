@@ -5,13 +5,6 @@ class ContractsController < ApplicationController
     def index
     end
 
-    def edit
-    end
-
-    def update
-
-    end
-
     def create
         @contract = Contract.new(params.require(:contract).permit(:username, :usurname, :face, :status, :tarif_id))
         @contract.status = "Активен"
